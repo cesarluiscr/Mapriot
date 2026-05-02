@@ -16,23 +16,15 @@ import {
   Trophy,
   XCircle,
   Clock,
-  Layout,
-  Menu,
   GraduationCap,
-  Download,
-  FileText,
-  LogOut,
-  User
+  Download
 } from 'lucide-react';
 import { jsPDF } from 'jspdf';
 import { questions, Question } from './data/questions';
-import { useAuth } from './context/AuthContext';
-import Login from './components/Login';
 
 type GameState = 'START' | 'QUIZ' | 'RESULT';
 
 function QuizApp() {
-  const { user, logout } = useAuth();
   const [gameState, setGameState] = useState<GameState>('START');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -393,22 +385,9 @@ function QuizApp() {
             </div>
             <span className="font-bold text-lg font-sans tracking-tight hidden sm:inline-block">MAPRIOT</span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100">
-              <User className="w-4 h-4 text-slate-600" />
-              <span className="text-sm font-medium text-slate-700">{user?.name}</span>
-            </div>
-            <button className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors">
-              <HelpCircle className="w-5 h-5" />
-            </button>
-            <button
-              onClick={logout}
-              className="p-2 text-slate-500 hover:bg-red-50 hover:text-red-600 rounded-full transition-colors"
-              title="Cerrar sesión"
-            >
-              <LogOut className="w-5 h-5" />
-            </button>
-          </div>
+          <button className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors">
+            <HelpCircle className="w-5 h-5" />
+          </button>
         </div>
       </nav>
 
@@ -427,19 +406,5 @@ function QuizApp() {
 }
 
 export default function App() {
-  return (
-    <div>
-      <AppContent />
-    </div>
-  );
-}
-
-function AppContent() {
-  const { isAuthenticated } = useAuth();
-
-  if (!isAuthenticated) {
-    return <Login />;
-  }
-
   return <QuizApp />;
 }

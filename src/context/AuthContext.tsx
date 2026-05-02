@@ -17,22 +17,12 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  // Load user from localStorage on mount
-  useEffect(() => {
-    const storedUser = localStorage.getItem('mapriot_user');
-    if (storedUser) {
-      try {
-        setUser(JSON.parse(storedUser));
-        setIsAuthenticated(true);
-      } catch (error) {
-        console.error('Error loading user:', error);
-        localStorage.removeItem('mapriot_user');
-      }
-    }
-  }, []);
+  const [user, setUser] = useState<User | null>({
+    id: '1',
+    name: 'Usuario',
+    email: 'usuario@example.com'
+  });
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
 
   const login = async (email: string, password: string) => {
     // Simulate API call (replace with real API)
