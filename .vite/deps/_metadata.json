@@ -1,0 +1,64 @@
+{
+  "hash": "9fbe630a",
+  "configHash": "2d0c6126",
+  "lockfileHash": "131b98c9",
+  "browserHash": "6ec065b2",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "c9b94d0d",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "e04a5f57",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "bda5eb94",
+      "needsInterop": true
+    },
+    "motion/react": {
+      "src": "../../node_modules/motion/dist/es/react.mjs",
+      "file": "motion_react.js",
+      "fileHash": "0635d013",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "529a5e6d",
+      "needsInterop": false
+    },
+    "jspdf": {
+      "src": "../../node_modules/jspdf/dist/jspdf.es.min.js",
+      "file": "jspdf.js",
+      "fileHash": "0c2bb990",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "index.es-B4HBUYEZ": {
+      "file": "index__es-B4HBUYEZ.js"
+    },
+    "chunk-JMLGY4N2": {
+      "file": "chunk-JMLGY4N2.js"
+    },
+    "chunk-SITVF2AJ": {
+      "file": "chunk-SITVF2AJ.js"
+    },
+    "html2canvas.esm-BJYJRQTM": {
+      "file": "html2canvas__esm-BJYJRQTM.js"
+    },
+    "purify.es-O6JRHCWT": {
+      "file": "purify__es-O6JRHCWT.js"
+    },
+    "chunk-2TUXWMP5": {
+      "file": "chunk-2TUXWMP5.js"
+    }
+  }
+}
