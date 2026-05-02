@@ -4,6 +4,9 @@ import App from './App.tsx';
 import { AuthProvider } from './context/AuthContext';
 import './index.css';
 
+// Clear old auth data
+localStorage.clear();
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AuthProvider>
