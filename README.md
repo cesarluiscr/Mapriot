@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# MAPRIOT Quiz App
 
-# Run and deploy your AI Studio app
+Este proyecto es una aplicación interactiva diseñada para aprender y evaluar conocimientos sobre el Manual de Planes Reguladores (MAPRIOT) de Costa Rica.
 
-This contains everything you need to run your app locally.
+## Requisitos Previos
 
-View your app in AI Studio: https://ai.studio/apps/fa8cc5d8-184d-4178-bc41-e88409aeb014
+- [Node.js](https://nodejs.org/) (Versión 18 o superior recomendada)
+- Un navegador moderno (Chrome, Firefox, Edge, etc.)
 
-## Run Locally
+## Instrucciones para ejecución local
 
-**Prerequisites:**  Node.js
+Para ejecutar esta aplicación en tu computadora localmente, sigue estos pasos:
 
+1. **Descargar y Descomprimir**: Asegúrate de haber extraído todos los archivos del ZIP en una carpeta.
+2. **Abrir Terminal**: Abre una terminal o consola de comandos en la raíz de la carpeta del proyecto.
+3. **Instalar Dependencias**:
+   ```bash
+   npm install
+   ```
+4. **Iniciar Servidor de Desarrollo**:
+   ```bash
+   npm run dev
+   ```
+5. **Ver la App**: Abre tu navegador en la dirección que aparezca en la terminal (usualmente `http://localhost:3000`).
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Notas importantes
+
+- **Página en blanco**: Las aplicaciones de React modernas **no se pueden abrir haciendo doble clic directo** en el archivo `index.html` debido a restricciones de seguridad del navegador (CORS) relacionadas con módulos de JavaScript. Es obligatorio usar un servidor (como se describe arriba con `npm run dev`).
+- **Antigravity / AI Studio**: Este proyecto está configurado para ejecutarse en el entorno de AI Studio. Si descargas el código, asegúrate de instalar las dependencias con `npm install` antes de intentar ejecutarlo.
+- **Exportación PDF**: La funcionalidad de exportar a PDF utiliza la librería `jspdf` y requiere un entorno de ejecución adecuado.
